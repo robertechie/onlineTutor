@@ -1,5 +1,5 @@
 # onlineTutor
-General: (For Admin, Tutors and Students);
+# General: (For Admin, Tutors and Students);
 1: Admin/Students /tutors can retrieve a subject in a category (by Id)
 End-Point: /api/v1/subject/:subid
 Method: GET  
@@ -8,14 +8,14 @@ auth-token required
 Content-Type: application/json
 }
 
-2: Admin/Students /tutors can retrieve all subjects, by category
+# : Admin/Students /tutors can retrieve all subjects, by category
  End-point: /api/v1/category/:cat_id
  Method: GET;
  Header: {auth-token:
  Content-Type: application/json
 }
 
-3. Admin/Students /tutors can retrieve all categories
+# 3. Admin/Students /tutors can retrieve all categories
 End-Point: /api/v1/category/
 Method: GET
 Header: {
@@ -23,7 +23,7 @@ auth-token:
 Content-Type: application/json
 }
 
-4) Admin/Students /tutors can search for subjects by name, sorted alphabetically in ascending order.
+# 4) Admin/Students /tutors can search for subjects by name, sorted alphabetically in ascending order.
 End-Point: /api/v1/subject/search/:subname
 Method: GET
 Headers: {
@@ -31,7 +31,7 @@ auth-token
 Content-Type: application/json
 }
 
-5) Admin/Students can search for tutors by first name, sorted alphabetically in ascending order.
+# 5) Admin/Students can search for tutors by first name, sorted alphabetically in ascending order.
 
 End-Point: /api/v1/student/search/tutor/:firstname
 End-Point: /api/v1/admin/search/tutor/:firstname
@@ -41,7 +41,7 @@ auth-token:
 Content-Type: application/json
 }
 
-6) Admin/Students /tutors can sign in.
+# 6) Admin/Students /tutors can sign in.
 End-Point: /api/v1/login,
 Method:Post;
 Body: {
@@ -49,7 +49,7 @@ Name:
 Password:
 }
 
-7) Student/Tutor can register
+# 7) Student/Tutor can register
 End-Point: /api/v1/register/,
 Method: Post;
 Header: {
@@ -65,8 +65,8 @@ first_name:
 }
 
 
-Admin:
-1: Admin can create subjects under 3 categories: primary, JSS, SSS
+# Admin:
+# 1: Admin can create subjects under 3 categories: primary, JSS, SSS
 End-Point: /api/v1/admin/subject/
 Method: Post;
 Headers: {
@@ -79,7 +79,7 @@ name : //subject name,
 cart_ids: //category id
 }
 
-2) Admin can update a subject in a category (by Id)
+# 2) Admin can update a subject in a category (by Id)
 End-Point: /api/v1/admin/subject/
 Method: Patch;
 Headers: {
@@ -90,7 +90,7 @@ Content-Type: application/json
 Body: {
 ids: //subject id, 
 nameup: //name of the the subject}
-3) Admin can delete a subject in a category (by Id)
+# 3) Admin can delete a subject in a category (by Id)
 End-Point: /api/v1/admin/subject/
 Method: Delete;
 Headers: {
@@ -102,7 +102,7 @@ Body: {
 ids: //subject id
 }
 ///category operation
-4) Admin can create a category
+# 4) Admin can create a category
 End-Point: /api/v1/admin/category/
 Method: Post;
 Headers: {
@@ -115,7 +115,7 @@ name: //name of category
 ui: //category id
 }
 
-4) Admin can update a category
+# 4) Admin can update a category
 End-Point: /api/v1/admin/category/
 Method: Patch;
 Headers: {
@@ -129,7 +129,7 @@ ui: //category id
 }
 
 
-4) Admin can delete a category
+# 4) Admin can delete a category
 End-Point: /api/v1/admin/category/
 Method: Patch;
 Headers: {
@@ -141,7 +141,7 @@ name: //name of category
 ui: //category id
 }
 
-5) Admin can retrieve all tutors
+# 5) Admin can retrieve all tutors
 End-Point: /api/v1/admin/tutor/
 Method: GET 
 Headers: {
@@ -149,7 +149,7 @@ auth-token:  //the return auth-token
 Content-Type: application/json
 }
 
-6) Admin can get a tutor (by Id)
+# 6) Admin can get a tutor (by Id)
 
 End-Point: /api/v1/admin/tutor/:id
 Method: GET;
@@ -158,7 +158,7 @@ auth-token:  //the return auth-token
 Content-Type: application/json
 }
 
-7) Admin can deactivate a tutor (by Id)
+# 7) Admin can deactivate a tutor (by Id)
 End-Point: /api/v1/admin/tutor/
 Method: POST;
 Headers: {
@@ -170,7 +170,7 @@ userid: //tutor id to deactivate
 }
 
 
-7) Admin can activate a tutor (by Id)
+# 7) Admin can activate a tutor (by Id)
 End-Point: /api/v1/admin/tutor/
 Method: PATCH;
 Headers: {
@@ -182,7 +182,7 @@ userid: //tutor id to deactivate
 }
 
 
-8) Admin can book lessons
+# 8) Admin can book lessons
 End-Point: /api/v1/admin/lesson/
 Method: Post;
 Headers: {
@@ -194,7 +194,7 @@ ids: //subject id to book
 userid: //userid to book for,
 bookby //bookers id}
 
-9). Admin can retrieve all lessons
+# 9). Admin can retrieve all lessons
 End-Point: /api/v1/admin/lesson/
 Method: GET;
 Headers: {
@@ -202,7 +202,7 @@ auth-token:  //the return auth-token
 Content-Type: application/json
 }
 
-10). Admin can get a lesson (by Id)
+# 10). Admin can get a lesson (by Id)
 End-Point: /api/v1/admin/lesson/:id'
 Method: GET;
 Headers: {
@@ -210,7 +210,7 @@ auth-token:  //the return auth-token
 Content-Type: application/json
 }
 
-11). Admin can update a lesson (by Id)
+# 11). Admin can update a lesson (by Id)
 End-Point: /api/v1/admin/lesson/
 Method: PATCH;
 Headers: {
@@ -224,7 +224,7 @@ subject :  //the suject to update to id
 
 
 
-12). Admin can delete a lesson (by Id)
+# 12). Admin can delete a lesson (by Id)
 End-Point: /api/v1/admin/lesson/:id  //lesson id
 Method: Delete;
 Headers: {
@@ -232,7 +232,7 @@ auth-token:  //the return auth-token
 Content-Type: application/json
 }
 
-13 Admin signs up as a tutor but you can make a tutor of your choice an admin by giving them the admin role. Not all tutors must be admin. Just a few.
+# 13 Admin signs up as a tutor but you can make a tutor of your choice an admin by giving them the admin role. Not all tutors must be admin. Just a few.
 
 End-Point: /api/v1/admin/tutor/:id  //lesson id
 Method: POST;
@@ -244,8 +244,8 @@ Content-Type: application/json
 
 
 
-Tutors:
-1) Tutors can register to take a subject in a category
+# Tutors:
+# 1) Tutors can register to take a subject in a category
 End-Point: /api/v1/tutor/
 Method: Post;
 Headers: {
@@ -256,7 +256,7 @@ Body: {
 ids:  //the subject id to register
 }
 
-2) Tutors can see all subjects they registered to take
+# 2) Tutors can see all subjects they registered to take
 End-Point: /api/v1/tutor/
 Method: Get;
 Headers: {
@@ -264,7 +264,7 @@ auth-token:  //the return auth-token
 Content-Type: application/json
 }
 
-3) Tutors can update a registered subject
+# 3) Tutors can update a registered subject
 End-Point: /api/v1/tutor/
 Method: Patch;
 Headers: {
@@ -276,7 +276,7 @@ regID:  //the registration id
 subject: //the subject id with to update with
 }
 
-4) Tutors can delete a registered subject
+# 4) Tutors can delete a registered subject
 End-Point: /api/v1/tutor/:id   //id the registration id
 Method: Delete;
 Headers: {
@@ -289,8 +289,8 @@ Content-Type: application/json
 
 
 
-Students:
-2) Students can see all tutors taking a subject in a category
+# Students:
+# 2) Students can see all tutors taking a subject in a category
 End-Point: /api/v1/student/:catid  // catid the category id
 Method: Get;
 Headers: {
@@ -298,7 +298,7 @@ auth-token:  //the return auth-token
 Content-Type: application/json
 }
 
-3) Students can book lessons
+# 3) Students can book lessons
 End-Point: /api/v1/student/lesson/
 Method: Post;
 Headers: {
