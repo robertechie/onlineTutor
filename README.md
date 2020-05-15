@@ -1,4 +1,6 @@
 # onlineTutor
+googlesheet link for the documentation
+https://docs.google.com/document/d/1krZVWfjXRre3kqYfJJoS9jW8Izo9pDIDp9LpNkXifQ4/edit?usp=sharing
 # General: (For Admin, Tutors and Students);
 1: Admin/Students /tutors can retrieve a subject in a category (by Id)
 End-Point: /api/v1/subject/:subid
