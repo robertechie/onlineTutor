@@ -1,3 +1,7 @@
+Admin:robertechie@gmail.com
+Admin-Pass:robertechie
+
+
 # onlineTutor
 api link: https://tutoringonline.herokuapp.com/
 googlesheet link for the documentation
